@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="title">Cadastro de alunos</h1>
+        <a href="listagemAlunos.html"> Veja os alunos listados!</a>
+    </nav>
+    <section>
+        <form id="formAluno">
+            <div>
+                <span>Cu de burro:</span><br><input type="text" name="Turma" id="Turma">
+            </div>
+            <div>
+                <span>Nome do Aluno:</span><br><input type="text" name="Nome" id="Nome">
+            </div>
+            <div>
+                <span>Data de Nasciment</span><br><input type="date" name="DataNascimento" id="DataNascimento">
+            </div>
+            <div>
+                <span>Email: </span><br><input type="text" name="Email" id="Email">
+            </div>
+            <div>
+                <span>RG: </span><br><input type="text" name="RG" id="RG">
+            </div>
+            <div>
+                <span>Telefone Aluno: </span><br><input type="text" name="TelAluno" id="TelAluno">
+            </div>
+            <button type="submit">Cadastrar</button>
+            <!-- <div>
+                <span></span><input type="text" name="" id="">
+            </div>
+            <div>
+                <span></span><input type="text" name="" id="">
+            </div> -->
+        </form>
+    </section>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD-8iuk4fVuReIlpbD7jeiomvxWNCPSc4I",
+        authDomain: "bd3-nosql-lucas-henrique.firebaseapp.com",
+        projectId: "bd3-nosql-lucas-henrique",
+        storageBucket: "bd3-nosql-lucas-henrique.appspot.com",
+        messagingSenderId: "870519684348",
+        appId: "1:870519684348:web:ace5b9110ef4d8f46e2b79",
+        measurementId: "G-49LTE2RDZE"
+    };
+    firebase.initializeApp(firebaseConfig)
+
+    const db = firebase.firestore()
+
+    if(db)console.log("Conexão com banco concluida!")
+
+</script>
+<script src="./js/adicionarUser.js" defer></script>
+</html>

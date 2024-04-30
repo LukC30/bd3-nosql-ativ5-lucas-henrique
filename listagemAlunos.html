@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="title">Cadastro de alunos</h1>
+        <a href="Index.html">Faça o cadastro desses pé de rato!</a>
+    </nav>
+    <section>
+        <ul id="list" name="list">
+
+        </ul>
+    </section>
+    
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD-8iuk4fVuReIlpbD7jeiomvxWNCPSc4I",
+        authDomain: "bd3-nosql-lucas-henrique.firebaseapp.com",
+        projectId: "bd3-nosql-lucas-henrique",
+        storageBucket: "bd3-nosql-lucas-henrique.appspot.com",
+        messagingSenderId: "870519684348",
+        appId: "1:870519684348:web:ace5b9110ef4d8f46e2b79",
+        measurementId: "G-49LTE2RDZE"
+    };
+    firebase.initializeApp(firebaseConfig)
+
+    const db = firebase.firestore()
+
+    if(db)console.log("Conexão com banco concluida!")
+
+</script>
+<script src="./js/ListarDeletarAluno.js"></script>
+</html>
